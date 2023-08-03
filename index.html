@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>The Zombie Apocalypse</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="img/zombie.gif" type="image/x-icon">
+</head>
+<body class="body" onkeypress="keyLog(event);">
+    <div class="init-game" id="init-game">
+
+        <div class="int-rec" id="int-rec">
+            <h1 class="h1">The Zombie Apocalypse</h1>
+            <button onclick="charChoose();" class="btn-ng">New Game</button>
+            <button onclick="htp();" class="btn-htp">How to Play</button>
+
+        </div>
+    
+        <div class="char-choose">
+            <div class="char-rec" id="char-rec">
+                <h1 class="h1">Choose Your Character</h1>
+                <center>
+                    <img src="img/ninja/Idle__001.png" onclick="charNinja();" height="300px">
+                    <img src="img/rhb/Idle (1).png" onclick="charRHB();" height="380px">
+                    <img src="img/cg/Idle (1).png" onclick="charCG();" height="300px">
+                </center>
+            </div>
+        </div>
+
+        <div class="bg-choose">
+            <div class="bg-rec" id="bg-rec">
+                <h1 class="h1">Choose Your Level</h1>
+                <center>
+                    <img src="img/village.jpg" onclick="bgV();" height="200px">
+                    <img src="img/rooftop.jpg" onclick="bgRT();" height="200px">
+                    <img src="img/forest.jpg" onclick="bgF();" height="200px">
+                </center>
+            </div>
+        </div>
+
+        <div class="htp">
+            <div class="htp-rec" id="htp-rec">
+                <h1 class="h1">How to Play</h1>
+                <p class="htp-p">Click "New Game" for a new game.<br>
+                    In "Choose Your Character" you can choose your character.<br>
+                    In "Choose Your Level" you can choose your level.<br>
+                    Press Space to Jump over zombies and get points.<br>
+                    If you get hit by a zombie, you lose.<br>
+                    If you get 1500 points, you win.<br>
+                    Click "Back" to go back to the main menu.<br>
+                </p>
+                <button onclick="htpBack();" class="btn-back">Back</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-game" id="main-game">
+        <img src="" id="char" class="char">
+        <p class="score" id="score">Score: </p>
+
+    </div>
+
+    <div class="game-over" id="game-over">
+        <h1>Game Over</h1>
+        <P>Better luck next time!</P>
+        <P class="final-score" id="final-score">Your Score: </p>
+        <button onclick="reload();" class="btn-ta">Try Again?</button>
+    </div>
+
+    <div class="game-won" id="game-won">
+        <h1>Game Won</h1>
+        <div>Thanks for playing!</div>
+        <div>Your Score: 1500/1500</div>
+        <button onclick="reload();" class="btn-e-na">New Game?</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

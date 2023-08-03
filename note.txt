@@ -1,0 +1,9 @@
+#Characters
+Ninja = 1
+Red Hat Boy = 2
+Cute Girl = 3
+
+#Backgrounds
+Village = 1
+Rooftop = 2
+Forrest = 3
