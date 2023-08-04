@@ -11,36 +11,42 @@ const char = document.getElementById("char");
 var character = 0;
 var level = 0;
 
-function htp(){
-    document.getElementById("int-rec").style.visibility = "hidden";
-    document.getElementById("htp-rec").style.visibility = "visible";
+
+
+function switchVisibility(hideId, showId) {
+    document.getElementById(hideId).style.visibility = "hidden";
+    document.getElementById(showId).style.visibility = "visible";
+
 }
 
-function htpBack(){
-    document.getElementById("htp-rec").style.visibility = "hidden";
-    document.getElementById("int-rec").style.visibility = "visible";
+function htp() {
+    switchVisibility("int-rec", "htp-rec");
+    
 }
 
-function charChoose(){
-    document.getElementById("int-rec").style.visibility = "hidden";
-    document.getElementById("char-rec").style.visibility = "visible";
+function htpBack() {
+    switchVisibility("htp-rec", "int-rec");
+
 }
 
-function charNinja(){
-    document.getElementById("char-rec").style.visibility = "hidden";
-    document.getElementById("bg-rec").style.visibility = "visible";
+function charChoose() {
+    switchVisibility("int-rec", "char-rec");
+
+}
+
+function charNinja() {
+    switchVisibility("char-rec","bg-rec")
     character = 1;
 }
 
 function charRHB(){
-    document.getElementById("char-rec").style.visibility = "hidden";
-    document.getElementById("bg-rec").style.visibility = "visible";
+    switchVisibility("char-rec", "bg-rec")
     character = 2;
 }
 
 function charCG(){
-    document.getElementById("char-rec").style.visibility = "hidden";
-    document.getElementById("bg-rec").style.visibility = "visible";
+    switchVisibility("char-rec", "bg-rec")
+
     character = 3;
 }
 
