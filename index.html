@@ -1,20 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
+    <meta name="viewport" content="width=device-width,initilal-scale=1.0">
     <title>The Zombie Apocalypse</title>
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="img/zombie.gif" type="image/x-icon">
+
 </head>
+
 <body class="body" onkeypress="keyLog(event);">
     <div class="init-game" id="init-game">
 
         <div class="int-rec" id="int-rec">
-            <h1 class="h1">The Zombie Apocalypse</h1>
-            <button onclick="charChoose();" class="btn-ng">New Game</button>
-            <button onclick="htp();" class="btn-htp">How to Play</button>
-
+            <div class="content">
+                <h1 class="h1">The Zombie Apocalypse</h1>
+                <button onclick="charChoose();" class="btn-ng">New Game</button>
+                <button onclick="htp();" class="btn-htp">How to Play</button>
+            </div>
         </div>
-    
+
         <div class="char-choose">
             <div class="char-rec" id="char-rec">
                 <h1 class="h1">Choose Your Character</h1>
@@ -74,5 +79,13 @@
     </div>
 
     <script src="script.js"></script>
+
+    <footer>
+        <p>forked with love by <a href="https://github.com/chamodhk">chamodhk</a>
+            <br>
+        forked from <a href="https://github.com/mendisofficial/the-zombie-apocalypse">mendisofficial</a></p>
+    </footer>
 </body>
+
+
 </html>
