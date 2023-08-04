@@ -1,65 +1,80 @@
-.body{
+body{
+    overflow: hidden;
+    padding: 0;
     margin: 0;
 }
 
 .init-game{
-    width: 100%;
-    height: 100vh;
-    background-image: url(img/bg.png);
-    background-size: cover;
-    position: absolute;
-
-    /* visibility: hidden; */
+    background-image: url('img/bg.png');
+    width:100vw;
+    height:80vh;
 }
 
-.int-rec{
+.int-rec,
+.char-rec,
+.bg-rec,
+.htp-rec,
+.main-game{
     position: absolute;
-    width: 1000px;
-    height: 600px;
-    background-color: black;
-    margin-top: 200px;
-    margin-left: 500px;
-    /* opacity: 0.6; */
+    width: max(70vw, 400px);
+    height: 500px;
+    background-color: rgba(0,0,0,0.6);
+    text-align: center;
+    color: aliceblue;
+    font-family: sans-serif;
+    top:100px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:0 auto;
+    
+    
+}
+
+.int-rec h1{
+    margin-block-start: 0;
+    
+}
+
+.content{
+    position: relative;
+    top: 200px;
+}
+
+.btn-ng{
+    background-color: rgb(0,0,125);
     color: white;
-
-    /* visibility: hidden; */
+    padding: 7px;
+    cursor: pointer;
+    border: none;
 }
 
-.char-rec{
-    visibility: hidden;
-    position: absolute;
-    width: 1000px;
-    height: 600px;
-    margin-top: 200px;
-    margin-left: 500px;
-    background-color: black;
-    /* opacity: 0.6; */
+.btn-htp{
+    background-color: rgb(0, 125, 0);
+    padding: 7px;
     color: white;
+    cursor: pointer;
+    border: none;
 }
 
-.bg-rec{
-    visibility: hidden;
-    position: absolute;
-    width: 1000px;
-    height: 600px;
-    margin-top: 200px;
-    margin-left: 500px;
-    background-color: black;
-    /* opacity: 0.6; */
-    color: white;
-}
-
+.char-rec,
+.bg-rec,
 .htp-rec{
     visibility: hidden;
     position: absolute;
-    width: 1000px;
-    height: 600px;
-    margin-top: 200px;
-    margin-left: 500px;
-    background-color: black;
-    /* opacity: 0.6; */
-    color: white;
 }
+
+.char-rec{
+    overflow-y: scroll;
+    
+}
+
+.char-rec img{
+    display: inline-block;
+    max-width: fit-content;
+    max-height: fit-content;
+}
+
 
 .main-game{
     visibility: hidden;
@@ -158,24 +173,9 @@
     visibility: hidden;   
 }
 
-.h1{
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
 
-.btn-ng{
-    width: 300px;
-    height: 50px;
-    background-color: red;
-    color: white;
-    font-size: 30px;
-    margin-top: 200px;
-    margin-left: 180px;
-}
+
+
 
 .btn-ta{
     width: 300px;
@@ -205,14 +205,7 @@
     font-size: 30px;
 }
 
-.btn-back{
-    width: 300px;
-    height: 50px;
-    background-color: green;
-    color: white;
-    font-size: 30px;
-    margin-left: 350px;
-}
+
 
 .htp-p{
     font-size: 30px;
