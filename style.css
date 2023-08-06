@@ -128,12 +128,12 @@ html{
 .char {
     height: 300px;
     position: absolute;
-    margin-top: 550px;
+    top: calc(100% - 300px);
     margin-left: 50px;
 }
 
 .zombie {
     height: 250px;
-    margin-top: 600px;
     position: absolute;
+    top: calc(100% - 250px);
 }
