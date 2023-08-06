@@ -1,299 +1,139 @@
-body{
-    overflow: hidden;
+body,
+html{
     padding: 0;
     margin: 0;
 }
 
-.init-game{
-    background-image: url('img/bg.png');
-    width:100vw;
-    height:94vh;
-    background-repeat: round;
+.main{
+    background: url('img/bg.png');
+    height: calc(100% - 50px);
+    width: 100%;
     background-size: cover;
+    background-repeat: round;
+
 }
 
-.int-rec,
-.char-rec,
-.bg-rec,
-.htp-rec,
-.main-game{
+.window,
+.char-choose,
+.bg-choose{
     position: absolute;
-    width: max(70vw, 400px);
-    height: 500px;
-    background-color: rgba(0,0,0,0.6);
-    text-align: center;
-    color: aliceblue;
+    top: 20%;
+    left: 20%;
+    right: 20%;
+    width: 60%;
+    height: 40%;
+    background-color: rgba(0,0,0,0.5);
+}
+.initial-content{
+    width:100%;
+}
+
+.gname{
+    color: white;
+    font-size: 2em;
     font-family: sans-serif;
-    top:100px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    margin:0 auto;
-    
-    
+    text-shadow: 3px 3px 25px rgba(128, 0, 0, 1);
+    margin: 40px auto;
+    text-align: center;
 }
 
-.int-rec h1{
-    margin-block-start: 0;
-    
-}
+.button-set{
+    width: 40%;
+    display: flex;
+    flex-flow: row wrap;
+    margin: 10px auto;
+    gap: 20px;
+    justify-content: center;
 
-.content{
-    position: relative;
-    top: 200px;
 }
 
 .btn-ng{
-    background-color: rgb(0,0,125);
+    width: max-content;
+    padding: 15px;
+    background-color: rgb(0, 0, 125);
     color: white;
-    padding: 7px;
-    cursor: pointer;
-    border: none;
-}
-
-.btn-htp{
-    background-color: rgb(0, 125, 0);
-    padding: 7px;
-    color: white;
-    cursor: pointer;
-    border: none;
-}
-
-.char-rec,
-.bg-rec,
-.htp-rec{
-    visibility: hidden;
-    position: absolute;
-}
-
-.char-rec,
-.bg-rec{
-    overflow-y: scroll;
-    overflow-x: hidden;
+    border: 0;
+    border-radius: 40px;
     
 }
 
-
-
-.char-rec img{
-    display: inline-block;
-    max-width: fit-content;
-    max-height: fit-content;
+.btn-htp {
+    width: max-content;
+    padding: 15px;
+    background-color: rgb(0, 125, 0);
+    color: white;
+    border: 0;
+    border-radius: 40px;
 }
 
+.char-choose{
+    overflow-y: scroll;
+    visibility: hidden;
+}
 
-#main-game{
+.bg-choose{
+    overflow-y: scroll;
+    visibility: hidden;
+}
+
+.bg-menu{
+    display: flex;
+    width:  80%;
+    flex-flow: column wrap;
+    gap: 10px;
+   margin: 10px auto;
+}
+#main-game {
     visibility: hidden;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     background-repeat: repeat-x;
     background-size: cover;
     position: absolute;
-    top:-4%;
+    overflow-y: hidden;
     overflow-x: hidden;
-    
+
 }
 
-#score{
+
+
+.gameBG1,
+.gameBG2,
+.gameBG3{
+    
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
     position: absolute;
-    top:40px;
-    left: 10px;
-    background: rgba(0,0,0,0.5);
-    color: white;
-    font-family: sans-serif;
-    font-size: 50px;
-    font-weight: bold;
-    padding: 5px;
+    overflow-x: hidden;
+    background-size:cover;
+    
+    
+
 
 }
 
 .gameBG1{
-    background-image: url(img/village.jpg);
-    width: 100%;
-    height: 100vh;
-    background-repeat: repeat-x;
-    position: absolute;
-    overflow-x: hidden;
-    background-size: cover;
-    background-position-y: -20px;
+    background:url('img/village.jpg');
 }
 
-.gameBG2{
-    background-image: url(img/rooftop.jpg);
-    width: 100%;
-    height: 100vh;
-    background-repeat: repeat-x;
-    position: absolute;
-    overflow-x: hidden;
-    background-size: cover;
+.gameBG2 {
+    background: url('img/rooftop.jpg');
 }
 
-.gameBG3{
-    background-image: url(img/forest.jpg);
-    width: 100%;
-    height: 100vh;
-    background-repeat: repeat-x;
-    position: absolute;
-    overflow-x: hidden;
-    background-size: cover;
+.gameBG3 {
+    background: url('img/forest.jpg');
 }
 
-.char{
+.char {
     height: 300px;
     position: absolute;
     margin-top: 550px;
     margin-left: 50px;
 }
 
-.zombie{
+.zombie {
     height: 250px;
     margin-top: 600px;
     position: absolute;
-}
-
-
-
-.game-over{
-    position: absolute;
-    top: -1%;
-    width: 100%;
-    height: 100vh;
-    background-color: black;
-
-    font-size: 50px;
-    font-weight: bold;
-    color: white;
-
-    text-align: center;
-    padding: 0;
-
-    visibility: hidden;
-}
-
-.game-won{
-    position: absolute;
-    top:-5%;
-    width: 100%;
-    height: 100vh;
-    background-color: black;
-    margin-top: 0;
-
-    font-size: 100px;
-    font-weight: bold;
-    color: white;
-    text-align: center;
-
-
-    visibility: hidden;   
-}
-
-
-
-
-
-.btn-ta{
-    width: 300px;
-    height: 50px;
-    background-color: red;
-    color: white;
-    font-size: 30px;
-    
-}
-
-.btn-e-na{
-    width: 300px;
-    height: 50px;
-    background-color: red;
-    color: white;
-    font-size: 30px;
-}
-
-
-
-.htp-p{
-    font-size: 30px;
-    margin-top: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.char-img1{
-    height: 300px;
-    cursor: pointer;
-}
-
-.char-p1{
-    position: absolute;
-    margin-left: 100px;
-    font-size: 30px;
-    color: white;
-    margin-top: -5px;
-}
-
-.char-img2{
-    position: absolute;
-    height: 500px;
-    margin-top: -350px;
-    cursor: pointer;
-}
-
-.char-p2{
-    position: absolute;
-    margin-left: 350px;
-    font-size: 30px;
-    color: white;
-    margin-top: -80px;
-}
-
-.char-img3{
-    position: absolute;
-    height: 500px;
-    margin-top: -300px;
-    margin-left: 540px;
-    cursor: pointer;
-}
-
-.char-p3{
-    position: absolute;
-    margin-left: 180px;
-    font-size: 30px;
-    color: white;
-    margin-top: -15px;
-}
-
-.char-bg1{
-    position: absolute;
-    height: 100px;
-    cursor: pointer;
-}
-
-.char-bg2{
-    height: 100px;
-    cursor: pointer;
-    position: absolute;
-}
-
-.char-bg3{
-    width: 100px;
-    cursor: pointer;
-    position: absolute;
-}
-
-footer{
-    position: absolute;
-    top: 93%;
-    height: max-content;
-    width: 100vw;
-    padding: 0 0 10px 0;
-    
-    text-align: center;
-    color: white;
-    background-color: black;
-
-}
-
-footer a{
-    color: white;
 }
