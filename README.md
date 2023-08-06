@@ -5,6 +5,10 @@
 
 The Zombie Apocalypse is a simple browser-based game where players can choose a character and level to play. The objective of the game is to jump over zombies to avoid getting hit and accumulate points by surviving as long as possible.
 
+## Play online
+
+simply visit https://chamodhk.github.io/the-zombie-apocalypse/ to play this game online.
+
 ### How to Play
 
 1. Clone the repository to your local machine.
