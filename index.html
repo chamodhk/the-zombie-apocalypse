@@ -13,10 +13,10 @@
                     <p class="gname">The Zombie Apocalypse</p>
 
                     <div class="button-set">
-                        <button class="btn-ng" onclick="charChoose();">
+                        <button class="btn ng" onclick="charChoose();">
                             New Game
                         </button>
-                        <button class="btn-htp">
+                        <button class="btn htpb" onclick="htp();">
                             How To Play
                         </button>
                     </div>
@@ -47,8 +47,41 @@
                     <p class="score" id="score">Score: </p>
                 
                 </div>
+                
+            
+            <div class="htp" id="htp">
+                <div class="htp-rec" id="htp-rec">
+                    <h1 class="h1">How to Play</h1>
+                    <p class="htp-p">Click "New Game" for a new game.<br>
+                        In "Choose Your Character" you can choose your character.<br>
+                        In "Choose Your Level" you can choose your level.<br>
+                        Press Space to Jump over zombies and get points.<br>
+                        If you get hit by a zombie, you lose.<br>
+                        If you get 1500 points, you win.<br>
+                        Click "Back" to go back to the main menu.<br>
+                    </p>
+                    <button onclick="htpBack();" class="back btn">Back</button>
+                </div>
+            </div>
+            
+            
+            
+            
+            <div class="game-over" id="game-over">
+                <h1>Game Over</h1>
+                <P>Better luck next time!</P>
+                <P class="final-score" id="final-score">Your Score: </p>
+                <button onclick="reload();" class="btn ta">Try Again?</button>
+            </div>
+            
+            <div class="game-won" id="game-won">
+                <h1>Game Won</h1>
+                <div>Thanks for playing!</div>
+                <div>Your Score: 1500/1500</div>
+                <button onclick="reload();" class="btn ng">New Game?</button>
             </div>
         
+        </div>
         <script src="script.js"></script>
 
     </body>
