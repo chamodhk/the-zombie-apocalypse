@@ -96,7 +96,8 @@ html{
     width:  80%;
     flex-flow: column wrap;
     gap: 10px;
-   margin: 10px auto;
+    margin: 10px auto;
+    justify-content: center;
 }
 #main-game {
     visibility: hidden;
