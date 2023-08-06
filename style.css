@@ -15,7 +15,10 @@ html{
 
 .window,
 .char-choose,
-.bg-choose{
+.bg-choose,
+.game-over,
+.game-won,
+.htp{
     position: absolute;
     top: 10%;
     left:0;
@@ -27,6 +30,12 @@ html{
 }
 .initial-content{
     width:100%;
+}
+
+.htp,
+.game-over,
+.game-won{
+    visibility: hidden;
 }
 
 .gname{
@@ -51,7 +60,6 @@ html{
 .btn-ng{
     width: max-content;
     padding: 15px;
-    background-color: rgb(0, 0, 125);
     color: white;
     border: 0;
     border-radius: 40px;
@@ -133,14 +141,47 @@ html{
 }
 
 .char {
-    height: 300px;
+    height: calc(100% /4);
     position: absolute;
-    top: calc(100% - 300px);
-    margin-left: 50px;
+    top: calc(100% - (100%/4));
+    left: 10px;
 }
 
 .zombie {
-    height: 250px;
+    height: calc(100% /4);
     position: absolute;
     top: calc(100% - 250px);
+}
+
+.game-over,
+.htp{
+    text-align: center;
+    color: beige;
+    font-weight: 300;
+    font-family: sans-serif;
+    
+}
+
+button[class~="btn"] {
+    width: max-content;
+    padding: 15px;
+    color: white;
+    border: 0;
+    border-radius: 40px;
+}
+
+button[class~="ng"]{
+    background-color: rgb(0, 0, 125);
+}
+
+button[class~="htpb"] {
+    background-color: rgb(0, 125, 0);
+}
+
+button[class~="ta"] {
+    background-color: rgb(0125, 0, 125);
+}
+
+button[class~="back"] {
+    background-color: rgb(0, 125, 125);
 }
